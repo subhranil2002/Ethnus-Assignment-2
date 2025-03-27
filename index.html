@@ -3,193 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS Task 8</title>
-    <link rel="icon" href="js.ico.png">
-    <link rel="stylesheet" href="style.css">
+    <title> JS Tasks Index</title>
 </head>
-<body style="background-image: linear-gradient(yellow, pink); height: 100vh; display: flex; justify-content: center; flex-direction: column; width: 100%; align-items: center;">
-    <h1 style="color: blue; text-align: center;">Registration Form</h1>
-    <table>
-        <form action="">
-            <tr>
-                <th>
-                    First Name
-                </th>
-                <td>
-                    <input type="text" style="width: 98.8%;" id="first_name">
-                    <span style="color: red;" id="first_name_status"></span>
-                </td>
-            </tr>
-    
-            <tr>
-                <th>
-                    Last Name
-                </th>
-                <td>
-                    <input type="text" style="width: 98.8%;" id="last_name">
-                    <span style="color: red;" id="last_name_status"></span>
-                </td>
-            </tr>
+<body style="display: flex; justify-content: center; ">
+    <div>
+        <h1 style="text-align: center;">Index Page (JS Tasks)</h1>
+        <p style="text-align: center;">By SUBHRANIL BHATTACHARYA</p>
+        <hr>
+        <div style="display: flex;">
         
+
+        <table border="1" style="text-align: center; margin: 10px">
             <tr>
-                <th>
-                    Email
-                </th>
-                <td>
-                    <input type="email" style="width: 98.8%;" id="email">
-                    <span style="color: red;" id="email_status"></span>
-                </td>
+                <th colspan="2" style="font-size: 18px; padding: 5px;">JavaScript Tasks</th>
             </tr>
-        
             <tr>
-                <th>
-                    Password
-                </th>
-                <td>
-                    <input type="password" style="width: 98.8%;" id="password">
-                    <span style="color: red;" id="password_status"></span>
-                </td>
+                <th>Task Number</th>
+                <th>Link</th>
             </tr>
-
             <tr>
-                <th>
-                    Re-enter Password
-                </th>
-                <td>
-                    <input type="password" style="width: 98.8%;" id="re_password">
-                    <span style="color: red;" id="re_password_status"></span>
-                </td>
+                <td>Task 1</td>
+                <td><a href="./JS Tasks/JSTask1/index.html" target="_blank">Link 1</a></td>
             </tr>
-
             <tr>
-                <th rowspan="2">
-                    Gender
-                </th>
-                <td>
-                    <input type="radio" name="gender" id="">Male
-                </td>
+                <td>Task 2</td>
+                <td><a href="./JS Tasks/JSTask2/index.html" target="_blank">Link 2</a></td>
             </tr>
-
             <tr>
-                <td><input type="radio" name="gender" id="">Female</td>
+                <td>Task 3</td>
+                <td><a href="./JS Tasks/JSTask3/index.html" target="_blank">Link 3</a></td>
             </tr>
-
             <tr>
-                <th>Phone Number</th>
-                <td>
-                    <input type="number" style="width: 98.8%;" id="phone">
-                    <span style="color: red;" id="phone_status"></span>
-                </td>
+                <td>Task 4</td>
+                <td><a href="./JS Tasks/JSTask4/index.html" target="_blank">Link 4</a></td>
             </tr>
-
             <tr>
-                <th>Address</th>
-                <td>
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
-                </td>
+                <td>Task 5</td>
+                <td><a href="./JS Tasks/JSTask5/index.html" target="_blank">Link 5</a></td>
             </tr>
-
             <tr>
-                <th>State</th>
-                <td>
-                    <input type="text" style="width: 98.8%;" id="state">
-                    <span style="color: red;" id="state_status"></span>
-                </td>
+                <td>Task 6</td>
+                <td><a href="./JS Tasks/JSTask6/index.html" target="_blank">Link 6</a></td>
             </tr>
-
             <tr>
-                <th>Country</th>
-                <td>
-                    <select name="" id="country">
-                        <option value="">India</option>
-                        <option value="">USA</option>
-                        <option value="">Canada</option>
-                        <option value="">Australia</option>
-                        <option value="">United Kingdom</option>
-                        <option value="">Pakistan</option>
-                        <option value="">Nepal</option>
-                        <option value="">Sri Lanka</option>
-                        <option value="">Bangladesh</option>
-                    </select>
-                </td>
+                <td>Task 7</td>
+                <td><a href="./JS Tasks/JSTask7/index.html" target="_blank">Link 7</a></td>
             </tr>
-
             <tr>
-                <th>Languages Known</th>
-                <td>
-                    <input type="checkbox">English
-                    <input type="checkbox">Kannada
-                    <input type="checkbox">Hindi
-                    <input type="checkbox">Telugu
-                </td>
+                <td>Task 8</td>
+                <td><a href="./JS Tasks/JSTask8/index.html" target="_blank">Link 8</a></td>
             </tr>
-
-            <tr>
-                <td colspan="2">
-                    <input type="checkbox">Hereby I confirm all the given details are true
-                </td>
-            </tr>
-
-            <tr>
-                <td colspan="2">
-                    Login to <a href="https://ethnus.com/" target="_blank">Ethnus</a> website
-                </td>
-            </tr>
-        </form>
-    </table>
-    <button style="margin-top: 20px; color: white; padding: 10px; background-color: red; border: 2px solid black; border-radius: 20px;">
-        REGISTER
-    </button>
-
-    <script>
-        const inputFields = document.querySelectorAll("input[type='text'], input[type='email'], input[type='password'], input[type='number']");
-        
-        // for text fields
-        inputFields.forEach(input => {
-            input.addEventListener('input', function() {
-                const statusElement = document.getElementById(`${input.id}_status`);
-                if (input.value.length < 3) {
-                    statusElement.textContent = 'POOR';
-                } else {
-                    statusElement.textContent = '';
-                }
-            });
-        });
-
-        //for email field
-        const emailField = document.getElementById('email');
-        const emailStatus = document.getElementById('email_status');
-        emailField.addEventListener('input', function() {
-            if (emailField.value.includes('@')) {
-                emailStatus.textContent = '';
-            } else {
-                emailStatus.textContent = 'POOR';
-            }
-        });
-
-        //for password field
-        const passwordField = document.getElementById('password');
-        const passwordStatus = document.getElementById('password_status');
-        passwordField.addEventListener('input', function() {
-            if (passwordField.value.length >= 8) {
-                passwordStatus.textContent = '';
-            } else {
-                passwordStatus.textContent = 'POOR';
-            }
-        });
-
-        //for number field
-        const phoneField = document.getElementById('phone');
-        const phoneStatus = document.getElementById('phone_status');
-        phoneField.addEventListener('input', function() {
-            if (phoneField.value.length >= 1) {
-                phoneStatus.textContent = '';
-            } else {
-                phoneStatus.textContent = 'POOR';
-            }
-        });
-    </script>
+        </table>
+    </div>
+    </div>
 </body>
-
-
 </html>
